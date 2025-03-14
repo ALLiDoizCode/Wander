@@ -2,12 +2,12 @@ import type { PermissionType } from "~applications/permissions";
 import type { ModuleProperties } from "~api/module";
 
 // permissions required by this module
-const permissions: PermissionType[] = ["ACCESS_ADDRESS"];
+const permissions: PermissionType[] = ["ASYMMETRIC_ENCRYPT"];
 
-const exampleModule: ModuleProperties = {
+const asymmetricEncrypt: ModuleProperties = {
   // name of the function (window.arweave.wallet.getExample)
-  functionName: "getExample",
+  functionName: "asymmetricEncrypt",
   permissions
 };
 
-export default exampleModule;
+export default asymmetricEncrypt;

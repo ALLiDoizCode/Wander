@@ -47,6 +47,10 @@ import userTokensModule from "../modules/user_tokens";
 import userTokens from "../modules/user_tokens/user_tokens.background";
 import tokenBalanceModule from "../modules/token_balance";
 import tokenBalance from "../modules/token_balance/token_balance.background";
+import asymmetricEncryptModule from "../modules/asymmetric_encrypt";
+import asymmetricEncrypt from "../modules/asymmetric_encrypt/asymmetric_encrypt.background";
+import asymmetricDecryptModule from "../modules/asymmetric_decrypt";
+import asymmetricDecrypt from "../modules/asymmetric_decrypt/asymmetric_decrypt.background";
 
 export interface ModuleAppData {
   tabID: number;
@@ -83,6 +87,8 @@ export const backgroundModules: BackgroundModule<any>[] = [
   { ...dispatchModule, function: dispatch },
   { ...encryptModule, function: encrypt },
   { ...decryptModule, function: decrypt },
+  { ...asymmetricEncryptModule, function: asymmetricEncrypt },
+  { ...asymmetricDecryptModule, function: asymmetricDecrypt },
   { ...signatureModule, function: signature },
   { ...signMessageModule, function: signMessage },
   { ...privateHashModule, function: privateHash },

@@ -68,6 +68,11 @@ import userTokens from "../modules/user_tokens/user_tokens.foreground";
 import tokenBalanceModule from "../modules/token_balance";
 import tokenBalance from "../modules/token_balance/token_balance.foreground";
 
+import asymmetricEncryptModule from "../modules/asymmetric_encrypt";
+import asymmetricEncrypt from "../modules/asymmetric_encrypt/asymmetric_encrypt.foreground";
+import asymmetricDecryptModule from "../modules/asymmetric_decrypt";
+import asymmetricDecrypt from "../modules/asymmetric_decrypt/asymmetric_decrypt.foreground";
+
 /**
  * @param result The result from the background script
  * @param params The params the background script received
@@ -107,6 +112,8 @@ export const foregroundModules: ForegroundModule[] = [
   { ...dispatchModule, function: dispatch, finalizer: dispatchFinalizer },
   { ...encryptModule, function: encrypt, finalizer: encryptFinalizer },
   { ...decryptModule, function: decrypt, finalizer: decryptFinalizer },
+  { ...asymmetricEncryptModule, function: asymmetricEncrypt },
+  { ...asymmetricDecryptModule, function: asymmetricDecrypt },
   { ...signatureModule, function: signature, finalizer: signatureFinalizer },
   { ...addTokenModule, function: addToken },
   { ...isTokenAddedModule, function: isTokenAdded },
